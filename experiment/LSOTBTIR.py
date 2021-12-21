@@ -14,7 +14,7 @@ from utils.viz import show_frame
 class ExperimentLSOTBTIR(object):
     def __init__(self, root_dir, result_dir='results', report_dir='reports'):
         super(ExperimentLSOTBTIR, self).__init__()
-        self.dataset = LSOTBTIR(root_dir)
+        self.dataset = LSOTBTIR(root_dir, subset='val')
         self.result_dir = os.path.join(result_dir, 'LSOTBTIR')
         self.report_dir = os.path.join(report_dir, 'LSOTBTIR')
         self.nbins_iou = 21
@@ -275,3 +275,4 @@ class ExperimentLSOTBTIR(object):
 
         print('Saving precision plots to', prec_file)
         fig.savefig(prec_file, dpi=300)
+
