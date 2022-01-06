@@ -275,4 +275,3 @@ class ExperimentLSOTBTIR(object):
 
         print('Saving precision plots to', prec_file)
         fig.savefig(prec_file, dpi=300)
-
